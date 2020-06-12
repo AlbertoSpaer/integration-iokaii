@@ -28,7 +28,7 @@ body{
 a.nav-link.waves-effect.waves-light, a.nav-link{
     color: #a7a7a7!important;
 }
-a.nav-link.active.waves-effect.waves-light,a.nav-link.waves-effect.waves-light:hover, a.nav-link:hover, a.nav-link:active{
+a.nav-link.active.waves-effect.waves-light,a.nav-link.waves-effect.waves-light:hover, a.nav-link:hover, a.nav-link.active{
     color: #fb3!important;
 }
 
