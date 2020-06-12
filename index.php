@@ -61,16 +61,16 @@
             </p>
             <div class="row mb-8">
                     <div class="col-md-4 col-xl-4 mb-2">
-                        <img class="img-responsive " src="./img/moto.jpg" alt="assurance moto" width="100%">
-                        <a class="btn btn-info btn-block">Assurance moto</a>
+                        <a href="#"><img class="img-responsive " src="./img/moto.jpg" alt="assurance moto" width="100%">
+                        <p class="btn btn-info btn-block">Assurance moto</p></a>
                     </div>
                     <div class="col-md-4 col-xl-4 mb-2">
-                      <img class="img-responsive" src="./img/voiture.png" alt="assurance moto" width="100%">
-                      <a href="assurance-auto.html" class="btn btn-info btn-block">Assurance auto</a>
+                    <a href="assurance-auto.html"><img class="img-responsive" src="./img/voiture.png" alt="assurance moto" width="100%">
+                      <p class="btn btn-info btn-block">Assurance auto </p></a>
                   </div>
                   <div class="col-md-4 col-xl-4 mb-2">
-                    <img class="img-responsive" src="./img/voyage.png" alt="assurance moto" width="100%">
-                    <a class="btn btn-info btn-block">Assurance voyage</a>
+                    <a href="#"><img class="img-responsive" src="./img/voyage.png" alt="assurance moto" width="100%">
+                    <p class="btn btn-info btn-block">Assurance voyage</p></a>
                   </div>
             </div>
         </div>
