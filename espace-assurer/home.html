@@ -1,150 +1,346 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>IOKAII Comparateur d'assurance en ligne</title>
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/mdb.min.css">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>IOKAII Comparateur d'assurance en ligne - Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/chart.css" rel="stylesheet" type="text/css">
+  <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/lightpick.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
 </head>
-<body class="bg-white">
- 
-    <div class="vertical-nav bg-primary" id="sidebar">
-        <div class="py-4 px-3 mb-4">
-          <div class="media d-flex align-items-center"><img src="../img/portrait/avatar-1.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
-            <div class="media-body">
-              <h4 class="m-0 text-white">Tinah</h4>
-              <p class="font-weight-white text-white mb-0">Fanomezantsoa</p>
-            </div>
-          </div>
-        </div>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.html">
+        <div class="sidebar-brand-text mx-3"><img src="../img/logo.jpg" alt="logo IOKAII" class="img-fluid"></div>
+      </a>
+
       
-        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
-      
-        <ul class="nav flex-column bg-white mb-0">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic bg-light">
-                      <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                      Home
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                      About
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                      Services
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                      Gallery
-                  </a>
-          </li>
-        </ul>
-      
-      </div>
-      <!-- End vertical navbar -->
-      
-      
-      <!-- Page content holder -->
-      <div class="page-content p-5" id="">
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">
+          <span>Tableau de bord</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link colla psed" href="utilisateurs.html">
+          <span>Gestion des utilisateurs</span>
+        </a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <span>Etat</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
+          <span>Paramétrages</span>
+        </a>
+      </li>
+     
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">7</span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="../img/portrait/avatar-1.png">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tinah Fanomezantsoa</span>
+                
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Content Row -->
         
-        <div class="separator"></div>
-        <div class="row ">
-          <div class="col-lg-8">
+           
+          <div class="row"> 
+
+            <div class="col-lg-8">
             
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/allianz.png" alt="coupon allianz">
+                <div class="row coupon">
+                    <div class="col-lg-2 logo">
+                        <img class="img-fluid center-block" src="../img/logo/allianz.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-7 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+                    </div>
                 </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+    
+                <div class="row coupon">
+                    <div class="col-lg-2 logo">
+                        <img class="img-fluid center-block" src="../img/logo/aro.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-7 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+    
+                <div class="row coupon">
+                    <div class="col-lg-2 logo">
+                        <img class="img-fluid center-block" src="../img/logo/saham.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-7 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/aro.png" alt="coupon allianz">
+    
+                <div class="row coupon">
+                    <div class="col-lg-2 logo">
+                        <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-7 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+                    </div>
                 </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+    
+                <div class="row coupon">
+                    <div class="col-lg-2 logo">
+                        <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-7 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/saham.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-            
-          </div>
-          <div class="col-lg-4">
+                
+              </div>       
+              <div class="col-lg-4">
 
                 <div class="activities">
                     <h3 class="title-activites">Historique d'activité</h3>
@@ -195,249 +391,75 @@
                 </div>
 
           </div>
-        </div>
-      
+        <!-- /.container-fluid -->
+
       </div>
+      <!-- End of Main Content -->
 
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; by Ingenosya 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
 
-<footer class="mt-2">
+    </div>
+    <!-- End of Content Wrapper -->
 
-
-  <!-- Copyright -->
-  <div class="footer-copyright bg-info text-center py-3 text-white">© 2020 IOKAII:
-    <a class="text-white" href="#">IGY</a>
   </div>
-  <!-- Copyright -->
+  <!-- End of Page Wrapper -->
 
-</footer>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/jquery-3.3.1.slim.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/mdb.min.js"></script>
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>IOKAII Comparateur d'assurance en ligne</title>
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/mdb.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body class="bg-white">
- 
-    <div class="vertical-nav bg-primary" id="sidebar">
-        <div class="py-4 px-3 mb-4">
-          <div class="media d-flex align-items-center"><img src="../img/portrait/avatar-1.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
-            <div class="media-body">
-              <h4 class="m-0 text-white">Tinah</h4>
-              <p class="font-weight-white text-white mb-0">Fanomezantsoa</p>
-            </div>
-          </div>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
-      
-        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
-      
-        <ul class="nav flex-column bg-white mb-0">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic bg-light">
-                      <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                      Home
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                      About
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                      Services
-                  </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                      <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                      Gallery
-                  </a>
-          </li>
-        </ul>
-      
-      </div>
-      <!-- End vertical navbar -->
-      
-      
-      <!-- Page content holder -->
-      <div class="page-content p-5" id="">
-        
-        <div class="separator"></div>
-        <div class="row ">
-          <div class="col-lg-8">
-            
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/allianz.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/aro.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/saham.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-
-            <div class="row coupon">
-                <div class="col-lg-2 logo">
-                    <img class="img-fluid center-block" src="../img/logo/NyHavana.png" alt="coupon allianz">
-                </div>
-                <div class="col-lg-7 content">
-                    <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
-                    <p>Marque : <strong class="text-primary">Mercedes</strong></p>
-                    <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
-                    <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
-                    <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
-                </div>
-                <div class="col-lg-3">
-                    <a class="btn btn-primary btn-sm marge" href="#">Voir Détails</a>
-                </div>
-            </div>
-            
-          </div>
-          <div class="col-lg-4">
-
-                <div class="activities">
-                    <h3 class="title-activites">Historique d'activité</h3>
-                    <div class="activ">
-                        <p class="date-activ">25 Mai 2020 à 18h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                    <div class="activ">
-                        <p class="date-activ">12 Mai 2020 à 17h00</p>
-                        <p>Vous avez comparer une assurance Auto</p>
-                    </div>
-                    <div class="activ">
-                        <p class="date-activ">05 Mai 2020 à 20h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                    <div class="activ">
-                        <p class="date-activ">01 Mai 2020 à 13h00</p>
-                        <p>Vous avez comparer une assurance Auto</p>
-                    </div>
-                    <div class="activ">
-                        <p class="date-activ">02 Avril 2020 09h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                </div>
-
-                <div class="news">
-                    <h3 class="title-news">News des Assurances</h3>
-                    <div class="new">
-                        <p class="date-activ">25 Mai 2020 à 18h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                    <div class="new">
-                        <p class="date-activ">12 Mai 2020 à 17h00</p>
-                        <p>Vous avez comparer une assurance Auto</p>
-                    </div>
-                    <div class="new">
-                        <p class="date-activ">05 Mai 2020 à 20h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                    <div class="new">
-                        <p class="date-activ">01 Mai 2020 à 13h00</p>
-                        <p>Vous avez comparer une assurance Auto</p>
-                    </div>
-                    <div class="new">
-                        <p class="date-activ">02 Avril 2020 09h00</p>
-                        <p>Vous avez comparer une assurance Moto</p>
-                    </div>
-                </div>
-
-          </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
-      
       </div>
-
-
-<footer class="mt-2">
-
-
-  <!-- Copyright -->
-  <div class="footer-copyright bg-info text-center py-3 text-white">© 2020 IOKAII:
-    <a class="text-white" href="#">IGY</a>
+    </div>
   </div>
-  <!-- Copyright -->
 
-</footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
 
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/jquery-3.3.1.slim.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="../js/jquery.easing.min.js"></script>
 
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../js/datatables/jquery.dataTables.min.js"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../js/datatables/datatables-demo.js"></script>
+
+  <script src="../js/mdb.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/lightpick.js"></script>
+<script>
+  var picker = new Lightpick({ field: document.getElementById('datepicker') });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 </body>
+
 </html>
->>>>>>> 8130bf0e46ad4f67c03aa3cb32bbfb05cecebf85
