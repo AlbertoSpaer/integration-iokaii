@@ -208,7 +208,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'utilisateur</h3>
+                                      <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'assureur</h3>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
@@ -216,16 +216,24 @@
                                     <div class="modal-body">
                                       <form role="form">
                                         <div class="form-group">
-                                            <label for="identifiant" class="text-primary">Identifiant *</label>
-                                            <input type="email" class="form-control form-control-sm" id="identifiant" aria-describedby="emailHelp" placeholder="Identifiant">
+                                          <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Telecharger</span>
+                                          </div>
+                                          <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                              aria-describedby="inputGroupFileAddon02">
+                                            <label class="custom-file-label" for="inputGroupFile02">Logo Assureur</label>
+                                          </div>
+                                        </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="nom" class="text-primary">Nom et prénom *</label>
-                                            <input class="form-control form-control-sm" id="nom" placeholder="Mot de Passe" type="password">
+                                            <label for="identifiant" class="text-primary">Nom *</label>
+                                            <input type="text" class="form-control form-control-sm" id="Nom Assureur" aria-describedby="emailHelp" placeholder="Nom de l'assureur">
                                         </div>
                                         <div class="form-group">
-                                          <label for="mail" class="text-primary">Adresse e-mail *</label>
-                                          <input class="form-control form-control-sm" id="mail" placeholder="Mot de Passe" type="password">
+                                            <label for="nom" class="text-primary">Description *</label>
+                                            <input class="form-control form-control-sm" id="description" placeholder="Description" type="textarea">
                                         </div>
                                         
                                       </form>
