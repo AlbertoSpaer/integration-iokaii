@@ -194,59 +194,7 @@
             <div class="row bg-white">
                 <div class="col-sm-12 text-left">
 
-                      
-
-                    <div class="row">
-                        <h3 class="mt-3">Gestion des assureurs</h3>
-                        <div class="col-sm-6 ml-auto text-right py-3">
-                            <button type="button" class="btn add" data-toggle="modal" data-target="#exampleModalCenter">
-                                <i class="fas fa-plus"></i> Ajouter
-                            </button>
-                              
-                              <!-- Modal -->
-                              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'assureur</h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <form role="form">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                          <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroupFileAddon01">Telecharger</span>
-                                          </div>
-                                          <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                              aria-describedby="inputGroupFileAddon02">
-                                            <label class="custom-file-label" for="inputGroupFile02">Logo Assureur</label>
-                                          </div>
-                                        </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="identifiant" class="text-primary">Nom *</label>
-                                            <input type="text" class="form-control form-control-sm" id="Nom Assureur" aria-describedby="emailHelp" placeholder="Nom de l'assureur">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nom" class="text-primary">Description *</label>
-                                            <input class="form-control form-control-sm" id="description" placeholder="Description" type="textarea">
-                                        </div>
-                                        
-                                      </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
-                                      <button type="button" class="btn btn-success text-right">Sauvegarder</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="row">
                       <div class="col-sm-12 py-3">
@@ -416,7 +364,47 @@
       </div>
     </div>
   </div>
-
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'assureur</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Telecharger</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                  aria-describedby="inputGroupFileAddon02">
+                <label class="custom-file-label" for="inputGroupFile02">Logo Assureur</label>
+              </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="identifiant" class="text-primary">Nom *</label>
+                <input type="text" class="form-control form-control-sm" id="Nom Assureur" aria-describedby="emailHelp" placeholder="Nom de l'assureur">
+            </div>
+            <div class="form-group">
+                <label for="nom" class="text-primary">Description *</label>
+                <input class="form-control form-control-sm" id="description" placeholder="Description" type="textarea">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap core JavaScript-->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
