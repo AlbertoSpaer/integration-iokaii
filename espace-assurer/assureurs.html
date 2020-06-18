@@ -250,101 +250,76 @@
 
                     <div class="row">
                       <div class="col-sm-12 py-3">
-                     
-                          
-                              <div class="table-responsive fixed">
-                                <table class="table table-bordered" style="text-align: center;" id="dataTable" width="100%" cellspacing="0">
-                                  <thead>
-                                    <tr>
-                                      <th class="text-table">Logo</th>
-                                      <th class="text-table">Nom</th>
-                                      <th class="text-table">Description</th>
-                                      <th class="text-table">Action</th> 
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td><img src="../img/logo/allianz.png" class="img-profile rounded-circle" alt="photo profil"></td>
-                                      <td>Allianz</td>
-                                      <td>
-                                        <textarea class="form-control" id="Textarea1" rows="3"></textarea>
-                                      </td>
-                                      <td style="width: 10%;">
-                                        <button type="button" rel="tooltip" data-target="#edit" data-toggle="modal" title="" class="btn btn-link" data-original-title="Edit Task">
-                                          <i class="fas fa-pen"></i>
-                                          </button>
-                                          <button style="float: right;" type="button" rel="tooltip" title="" class="btn btn-link-danger" data-original-title="Edit Task">
-                                            <i class="fas fa-trash"></i>
-                                          </button>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../img/logo/aro.png" class="img-profile rounded-circle" alt="photo profil"></td>
-                                        <td>Aro</td>
-                                        <td>
-                                            <textarea class="form-control" id="Textarea2" rows="3"></textarea>
+
+                              <div class="card">
+                                <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gestion des assureurs</h3>
+                                <div class="card-body">
+                                  <div id="table" class="table-editable">
+                                    <span class="table-add float-right mb-3 mr-2" data-toggle="modal" data-target="#exampleModalCenter"><a href="#!" class="text-success"><i
+                                          class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                                    <table class="table table-bordered table-responsive-md  text-center">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">Logo</th>
+                                          <th class="text-center">Nom</th>
+                                          <th class="text-center">Description</th>
+                                          <th class="text-center">Remove</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true"><img src="../img/logo/saham.png" class="img-profile rounded-circle" alt="photo profil"></td>
+                                          <td class="pt-3-half" contenteditable="true">saham</td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="3"></textarea></td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                           </td>
-                                          <td style="width: 10%;">
-                                            <button type="button" rel="tooltip" data-target="#edit" data-toggle="modal" title="" class="btn btn-link" data-original-title="Edit Task">
-                                              <i class="fas fa-pen"></i>
-                                              </button>
-                                              <button style="float: right;" type="button" rel="tooltip" title="" class="btn btn-link-danger" data-original-title="Edit Task">
-                                                <i class="fas fa-trash"></i>
-                                              </button>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true"><img src="../img/logo/allianz.png" class="img-profile rounded-circle" alt="photo profil"></td>
+                                          <td class="pt-3-half" contenteditable="true">allianz</td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="3"></textarea></td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                           </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../img/logo/mama.png" class="img-profile rounded-circle" alt="photo profil"></td>
-                                        <td>Mama</td>
-                                        <td>
-                                            <textarea class="form-control" id="Textarea3" rows="3"></textarea>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true"><img src="../img/logo/aro.png" class="img-profile rounded-circle" alt="photo profil"></td>
+                                          <td class="pt-3-half" contenteditable="true">aro</td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="3"></textarea></td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                           </td>
-                                          <td style="width: 10%;">
-                                            <button type="button" rel="tooltip" data-target="#edit" data-toggle="modal" title="" class="btn btn-link" data-original-title="Edit Task">
-                                              <i class="fas fa-pen"></i>
-                                              </button>
-                                              <button style="float: right;" type="button" rel="tooltip" title="" class="btn btn-link-danger" data-original-title="Edit Task">
-                                                <i class="fas fa-trash"></i>
-                                              </button>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr class="hide">
+                                          <td class="pt-3-half" contenteditable="true"><img src="../img/logo/NyHavana.png" class="img-profile rounded-circle" alt="photo profil"></td>
+                                          <td class="pt-3-half" contenteditable="true">NyHavana</td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="3"></textarea></td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                           </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../img/logo/NyHavana.png" class="img-profile rounded-circle" alt="photo profil"></td>
-                                        <td>NyHavana</td>
-                                        <td>
-                                            <textarea class="form-control" id="Textarea4" rows="3"></textarea>
+                                        </tr>
+                                        <tr class="hide">
+                                          <td class="pt-3-half" contenteditable="true"><img src="../img/logo/mama.png" class="img-profile rounded-circle" alt="photo profil"></td>
+                                          <td class="pt-3-half" contenteditable="true">mama</td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="3"></textarea></td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                                           </td>
-                                          <td style="width: 10%;">
-                                            <button type="button" rel="tooltip" data-target="#edit" data-toggle="modal" title="" class="btn btn-link" data-original-title="Edit Task">
-                                              <i class="fas fa-pen"></i>
-                                              </button>
-                                              <button style="float: right;" type="button" rel="tooltip" title="" class="btn btn-link-danger" data-original-title="Edit Task">
-                                                <i class="fas fa-trash"></i>
-                                              </button>
-                                          </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="../img/logo/saham.png" class="img-profile rounded-circle" alt="photo profil"></td>
-                                        <td>saham</td>
-                                        <td>
-                                            <textarea class="form-control" id="Textarea5" rows="3"></textarea>
-                                          </td>
-                                          <td style="width: 10%;">
-                                            <button type="button" rel="tooltip" data-target="#edit" data-toggle="modal" title="" class="btn btn-link" data-original-title="Edit Task">
-                                              <i class="fas fa-pen"></i>
-                                              </button>
-                                              <button style="float: right;" type="button" rel="tooltip" title="" class="btn btn-link-danger" data-original-title="Edit Task">
-                                                <i class="fas fa-trash"></i>
-                                              </button>
-                                          </td>
-                                    </tr>
-                                    
-                                    
-                                   
-                                  </tbody>
-                                </table>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
                               </div>
-                           
                           
                           </div>
                           

@@ -194,127 +194,86 @@
             <div class="row bg-white">
                 <div class="col-sm-12 text-left">
 
-                      
 
-                    <div class="row">
-                        <h3 class="mt-3">Gestion des assurés</h3>
-                        <div class="col-sm-6 ml-auto text-right py-3">
-                            <button type="button" class="btn add" data-toggle="modal" data-target="#exampleModalCenter">
-                                <i class="fas fa-plus"></i> Ajouter
-                            </button>
-                              
-                              <!-- Modal -->
-                              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'assurer</h3>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <form role="form">
-                                        <div class="form-group">
-                                            <label for="identifiant" class="text-primary">Nom *</label>
-                                            <input type="email" class="form-control form-control-sm" id="nom" aria-describedby="Nom assurer" placeholder="Nom">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nom" class="text-primary">Prénom *</label>
-                                            <input class="form-control form-control-sm" id="nom" placeholder="Prénom" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="date" class="text-primary">Date de naissance *</label>
-                                          <input class="form-control form-control-sm" id="date" placeholder="Date de naissance " type="text">
-                                      </div>
-                                        <div class="form-group">
-                                          <label for="identifiant" class="text-primary">Adresse *</label>
-                                          <input type="email" class="form-control form-control-sm" id="adresse" aria-describedby="Adresse" placeholder="Adresse">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="identifiant" class="text-primary">Téléphone *</label>
-                                        <input type="email" class="form-control form-control-sm" id="telephone" aria-describedby="telephone" placeholder="Numéro Téléphone">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="identifiant" class="text-primary">CIN *</label>
-                                      <input type="email" class="form-control form-control-sm" id="cin" aria-describedby="CIN" placeholder="CIN">
-                                  </div>
-                                      </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
-                                      <button type="button" class="btn btn-success text-right">Sauvegarder</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
 
                     <div class="row">
                       <div class="col-sm-12 py-3">
-                     
-                          
-                              <div class="table-responsive fixed">
-                                <table class="table table-bordered" style="text-align: center;" id="dataTable" width="100%" cellspacing="0">
-                                  <thead>
-                                    <tr>
-                                      <th class="text-table">Nom</th>
-                                      <th class="text-table">Prénom</th>
-                                      <th class="text-table">Date de naissance</th>
-                                      <th class="text-table">Adresse</th>
-                                      <th class="text-table">Téléphone</th> 
-                                      <th class="text-table">CIN</th> 
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>Fanomezantsoa</td>
-                                      <td>Tinah</td>
-                                      <td>05/01/1995</td>
-                                      <td>Lot IVZ 58 Talatamaty</td>
-                                      <td>+261 34 85 957 45</td>
-                                      <td>201 254 123 152</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Fanomezantsoa</td>
-                                      <td>Tinah</td>
-                                      <td>05/01/1995</td>
-                                      <td>Lot IVZ 58 Talatamaty</td>
-                                      <td>+261 34 85 957 45</td>
-                                      <td>201 254 123 152</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fanomezantsoa</td>
-                                        <td>Tinah</td>
-                                        <td>05/01/1995</td>
-                                        <td>Lot IVZ 58 Talatamaty</td>
-                                        <td>+261 34 85 957 45</td>
-                                        <td>201 254 123 152</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fanomezantsoa</td>
-                                      <td>Tinah</td>
-                                      <td>05/01/1995</td>
-                                      <td>Lot IVZ 58 Talatamaty</td>
-                                      <td>+261 34 85 957 45</td>
-                                      <td>201 254 123 152</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fanomezantsoa</td>
-                                        <td>Tinah</td>
-                                        <td>05/01/1995</td>
-                                        <td>Lot IVZ 58 Talatamaty</td>
-                                        <td>+261 34 85 957 45</td>
-                                        <td>201 254 123 152</td>
-                                    </tr>
-                                    
-                                    
-                                   
-                                  </tbody>
-                                </table>
-                              </div>
                            
+                              <div class="card">
+                                <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gestion des assurés</h3>
+                                <div class="card-body">
+                                  <div id="table" class="table-editable">
+                                    <span class="table-add float-right mb-3 mr-2" data-toggle="modal" data-target="#exampleModalCenter"><a href="#!" class="text-success"><i
+                                          class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">Nom</th>
+                                          <th class="text-center">Prénom</th>
+                                          <th class="text-center">Date de naissance</th>
+                                          <th class="text-center">Adresse</th>
+                                          <th class="text-center">Téléphone</th>
+                                          <th class="text-center">CIN</th>
+                                          <th class="text-center">Remove</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true">Fanomezantsoa</td>
+                                          <td class="pt-3-half" contenteditable="true">Tinah</td>
+                                          <td class="pt-3-half" contenteditable="true">05/01/1995</td>
+                                          <td class="pt-3-half" contenteditable="true">Lot IVZ 58 Talatamaty</td>
+                                          <td class="pt-3-half" contenteditable="true">+261 34 85 957 45</td>
+                                          <td class="pt-3-half" contenteditable="true">201 254 123 152</td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                          </td>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true">Fanomezantsoa</td>
+                                          <td class="pt-3-half" contenteditable="true">Tinah</td>
+                                          <td class="pt-3-half" contenteditable="true">05/01/1995</td>
+                                          <td class="pt-3-half" contenteditable="true">Lot IVZ 58 Talatamaty</td>
+                                          <td class="pt-3-half" contenteditable="true">+261 34 85 957 45</td>
+                                          <td class="pt-3-half" contenteditable="true">201 254 123 152</td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                          </td>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr>
+                                          <td class="pt-3-half" contenteditable="true">Fanomezantsoa</td>
+                                          <td class="pt-3-half" contenteditable="true">Tinah</td>
+                                          <td class="pt-3-half" contenteditable="true">05/01/1995</td>
+                                          <td class="pt-3-half" contenteditable="true">Lot IVZ 58 Talatamaty</td>
+                                          <td class="pt-3-half" contenteditable="true">+261 34 85 957 45</td>
+                                          <td class="pt-3-half" contenteditable="true">201 254 123 152</td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                          </td>
+                                        </tr>
+                                        <!-- This is our clonable table line -->
+                                        <tr class="hide">
+                                          <td class="pt-3-half" contenteditable="true">Fanomezantsoa</td>
+                                          <td class="pt-3-half" contenteditable="true">Tinah</td>
+                                          <td class="pt-3-half" contenteditable="true">05/01/1995</td>
+                                          <td class="pt-3-half" contenteditable="true">Lot IVZ 58 Talatamaty</td>
+                                          <td class="pt-3-half" contenteditable="true">+261 34 85 957 45</td>
+                                          <td class="pt-3-half" contenteditable="true">201 254 123 152</td>
+                                          <td>
+                                            <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
                           
                           </div>
                           
@@ -358,7 +317,50 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'assurer</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+                <label for="nom" class="text-primary">Nom *</label>
+                <input type="text" class="form-control form-control-sm" id="nom" placeholder="Nom">
+            </div>
+            <div class="form-group">
+                <label for="nom" class="text-primary">Prénom *</label>
+                <input class="form-control form-control-sm" id="nom" placeholder="Prénom" type="text">
+            </div>
+            <div class="form-group">
+              <label for="date" class="text-primary">Date de naissance *</label>
+              <input class="form-control form-control-sm" id="date" placeholder="Date de naissance " type="date">
+          </div>
+            <div class="form-group">
+              <label for="adresse" class="text-primary">Adresse *</label>
+              <input type="email" class="form-control form-control-sm" id="adresse" aria-describedby="Adresse" placeholder="Adresse">
+          </div>
+          <div class="form-group">
+            <label for="telephone" class="text-primary">Téléphone *</label>
+            <input type="number" class="form-control form-control-sm" id="telephone" aria-describedby="telephone" placeholder="Numéro Téléphone">
+        </div>
+        <div class="form-group">
+          <label for="cin" class="text-primary">CIN *</label>
+          <input type="number" class="form-control form-control-sm" id="cin" aria-describedby="CIN" placeholder="CIN">
+      </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -411,7 +413,95 @@
       </div>
     </div>
   </div>
+<script>
+  const $tableID = $('#table');
+ const $BTN = $('#export-btn');
+ const $EXPORT = $('#export');
 
+ const newTr = `
+<tr class="hide">
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half">
+    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+  </td>
+  <td>
+    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
+  </td>
+</tr>`;
+
+ $('.table-add').on('click', 'i', () => {
+
+   const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+
+   if ($tableID.find('tbody tr').length === 0) {
+
+     $('tbody').append(newTr);
+   }
+
+   $tableID.find('table').append($clone);
+ });
+
+ $tableID.on('click', '.table-remove', function () {
+
+   $(this).parents('tr').detach();
+ });
+
+ $tableID.on('click', '.table-up', function () {
+
+   const $row = $(this).parents('tr');
+
+   if ($row.index() === 0) {
+     return;
+   }
+
+   $row.prev().before($row.get(0));
+ });
+
+ $tableID.on('click', '.table-down', function () {
+
+   const $row = $(this).parents('tr');
+   $row.next().after($row.get(0));
+ });
+
+ // A few jQuery helpers for exporting only
+ jQuery.fn.pop = [].pop;
+ jQuery.fn.shift = [].shift;
+
+ $BTN.on('click', () => {
+
+   const $rows = $tableID.find('tr:not(:hidden)');
+   const headers = [];
+   const data = [];
+
+   // Get the headers (add special header logic here)
+   $($rows.shift()).find('th:not(:empty)').each(function () {
+
+     headers.push($(this).text().toLowerCase());
+   });
+
+   // Turn all existing rows into a loopable array
+   $rows.each(function () {
+     const $td = $(this).find('td');
+     const h = {};
+
+     // Use the headers from earlier to name our hash keys
+     headers.forEach((header, i) => {
+
+       h[header] = $td.eq(i).text();
+     });
+
+     data.push(h);
+   });
+
+   // Output the result
+   $EXPORT.text(JSON.stringify(data));
+ });
+</script>
   <!-- Bootstrap core JavaScript-->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
@@ -428,7 +518,8 @@
   <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="../js/datatables/datatables-demo.js"></script>
+  <script src="../js/datatables.js"></script>
+  <script src="../js/mdb.min.js"></script>
 </body>
 
 </html>
