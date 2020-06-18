@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>IOKAII Comparateur d'assurance en ligne - Gestion des utilisateurs</title>
+  <title>IOKAII Comparateur d'assurance en ligne - Gestion des assurés</title>
 
   <!-- Custom fonts for this template-->
   <link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,6 +34,7 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+      <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="utilisateurs.html">
         <div class="sidebar-brand-text mx-3"><img src="../img/logo.jpg" alt="logo IOKAII" class="img-fluid"></div>
       </a>
@@ -198,11 +199,14 @@
           <!-- Content Row -->
             <div class="row bg-white">
                 <div class="col-sm-12 text-left">
+
+
+
                     <div class="row">
                       <div class="col-sm-12 py-3">
-                        
+                           
                               <div class="card">
-                                <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gestion des utilisateurs</h3>
+                                <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Gestion des bandeaux publicitaires</h3>
                                 <div class="card-body">
                                   <div id="table" class="table-editable">
                                     <span class="table-add float-right mb-3 mr-2" data-toggle="modal" data-target="#exampleModalCenter"><a href="#!" class="text-success"><i
@@ -210,26 +214,39 @@
                                     <table class="table table-bordered table-responsive-md table-striped text-center">
                                       <thead>
                                         <tr>
-                                          <th class="text-center">Photo</th>
-                                          <th class="text-center">Nom</th>
-                                          <th class="text-center">Prénom</th>
-                                          <th class="text-center">Adresse e-mail</th>
-                                          <th class="text-center">Type</th>
+                                          <th class="text-center">Image Pub</th>
+                                          <th class="text-center">Description</th>
+                                          <th class="text-center">Jours d'activités</th>
+                                          <th class="text-center">Heurs d’activités</th>
+                                          <th class="text-center">Date parution</th>
+                                          <th class="text-center">Date d’expiration</th>
                                           <th class="text-center">Remove</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td class="pt-3-half" contenteditable="true"><img src="../img/portrait/avatar-1.png" width="50" class="img-profile rounded-circle" alt="photo profil"></td>
-                                          <td class="pt-3-half" contenteditable="true">Andriamalala</td>
-                                          <td class="pt-3-half" contenteditable="true">Lova</td>
-                                          <td class="pt-3-half" contenteditable="true">lovaandri@gmail.com</td>
                                           <td class="pt-3-half" contenteditable="true">
-                                            <select class="custom-select custom-select-sm">
-                                              <option selected>Choix du type</option>
-                                              <option value="1">Administrateur</option>
-                                              <option value="2">Assureur</option>
-                                            </select>
+                                              <img src="../img/akoor.png" alt="" class="img-fluid" width="50">
+                                          </td>
+                                          <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="2"></textarea></td>
+                                          <td class="pt-3-half" contenteditable="true">
+                                            <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+                                                <option value="1">Lundi</option>
+                                                <option value="2">Mardi</option>
+                                                <option value="3">Mercredi</option>
+                                                <option value="4">Jeudi</option>
+                                                <option value="5">Vendredi</option>
+                                                <option value="5">Samedi</option>
+                                                <option value="5">Dimanche</option>
+                                              </select>
+                                          </td>
+                                          <td class="pt-3-half" contenteditable="true"><input type="time" id="appt" name="appt"
+                                            min="07:59" max="17:59" required></td>
+                                          <td class="pt-3-half">
+                                            <input class="form-control form-control-sm" id="date-parution" placeholder="Date de parution " type="date">
+                                          </td>
+                                          <td class="pt-3-half" contenteditable="true">
+                                            <input class="form-control form-control-sm" id="date-expiration" placeholder="Date de naissance " type="date">
                                           </td>
                                           <td>
                                             <span class="table-remove"><button type="button"
@@ -238,64 +255,100 @@
                                         </tr>
                                         <!-- This is our clonable table line -->
                                         <tr>
-                                          <td class="pt-3-half" contenteditable="true"><img src="../img/portrait/avatar-1.png" width="50" class="img-profile rounded-circle" alt="photo profil"></td>
-                                          <td class="pt-3-half" contenteditable="true">Andriamalala</td>
-                                          <td class="pt-3-half" contenteditable="true">Lova</td>
-                                          <td class="pt-3-half" contenteditable="true">lovaandri@gmail.com</td>
-                                          <td class="pt-3-half" contenteditable="true">
-                                            <select class="custom-select custom-select-sm">
-                                              <option selected>Choix du type</option>
-                                              <option value="1">Administrateur</option>
-                                              <option value="2">Assureur</option>
-                                            </select>
-                                          </td>
-                                          <td>
-                                            <span class="table-remove"><button type="button"
-                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                          </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                                <img src="../img/akoor.png" alt="" class="img-fluid" width="50">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="2"></textarea></td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+                                                  <option value="1">Lundi</option>
+                                                  <option value="2">Mardi</option>
+                                                  <option value="3">Mercredi</option>
+                                                  <option value="4">Jeudi</option>
+                                                  <option value="5">Vendredi</option>
+                                                  <option value="5">Samedi</option>
+                                                  <option value="5">Dimanche</option>
+                                                </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><input type="time" id="appt" name="appt"
+                                              min="07:59" max="17:59" required></td>
+                                            <td class="pt-3-half">
+                                              <input class="form-control form-control-sm" id="date-parution" placeholder="Date de parution " type="date">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <input class="form-control form-control-sm" id="date-expiration" placeholder="Date de naissance " type="date">
+                                            </td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
                                         </tr>
                                         <!-- This is our clonable table line -->
                                         <tr>
-                                          <td class="pt-3-half" contenteditable="true"><img src="../img/portrait/avatar-1.png" width="50" class="img-profile rounded-circle" alt="photo profil"></td>
-                                          <td class="pt-3-half" contenteditable="true">Andriamalala</td>
-                                          <td class="pt-3-half" contenteditable="true">Lova</td>
-                                          <td class="pt-3-half" contenteditable="true">lovaandri@gmail.com</td>
-                                          <td class="pt-3-half" contenteditable="true">
-                                            <select class="custom-select custom-select-sm">
-                                              <option selected>Choix du type</option>
-                                              <option value="1">Administrateur</option>
-                                              <option value="2">Assureur</option>
-                                            </select>
-                                          </td>
-                                          <td>
-                                            <span class="table-remove"><button type="button"
-                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                          </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                                <img src="../img/akoor.png" alt="" class="img-fluid" width="50">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="2"></textarea></td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+                                                  <option value="1">Lundi</option>
+                                                  <option value="2">Mardi</option>
+                                                  <option value="3">Mercredi</option>
+                                                  <option value="4">Jeudi</option>
+                                                  <option value="5">Vendredi</option>
+                                                  <option value="5">Samedi</option>
+                                                  <option value="5">Dimanche</option>
+                                                </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><input type="time" id="appt" name="appt"
+                                              min="07:59" max="17:59" required></td>
+                                            <td class="pt-3-half">
+                                              <input class="form-control form-control-sm" id="date-parution" placeholder="Date de parution " type="date">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <input class="form-control form-control-sm" id="date-expiration" placeholder="Date de naissance " type="date">
+                                            </td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
                                         </tr>
                                         <!-- This is our clonable table line -->
                                         <tr class="hide">
-                                          <td class="pt-3-half" contenteditable="true"><img src="../img/portrait/avatar-1.png" width="50" class="img-profile rounded-circle" alt="photo profil"></td>
-                                          <td class="pt-3-half" contenteditable="true">Andriamalala</td>
-                                          <td class="pt-3-half" contenteditable="true">Lova</td>
-                                          <td class="pt-3-half" contenteditable="true">lovaandri@gmail.com</td>
-                                          <td class="pt-3-half" contenteditable="true">
-                                            <select class="custom-select custom-select-sm">
-                                              <option selected>Choix du type</option>
-                                              <option value="1">Administrateur</option>
-                                              <option value="2">Assureur</option>
-                                            </select>
-                                          </td>
-                                          <td>
-                                            <span class="table-remove"><button type="button"
-                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                                          </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                                <img src="../img/akoor.png" alt="" class="img-fluid" width="50">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><textarea class="form-control" id="Textarea5" rows="2"></textarea></td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+                                                  <option value="1">Lundi</option>
+                                                  <option value="2">Mardi</option>
+                                                  <option value="3">Mercredi</option>
+                                                  <option value="4">Jeudi</option>
+                                                  <option value="5">Vendredi</option>
+                                                  <option value="5">Samedi</option>
+                                                  <option value="5">Dimanche</option>
+                                                </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true"><input type="time" id="appt" name="appt"
+                                              min="07:59" max="17:59" required></td>
+                                            <td class="pt-3-half">
+                                              <input class="form-control form-control-sm" id="date-parution" placeholder="Date de parution " type="date">
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <input class="form-control form-control-sm" id="date-expiration" placeholder="Date de naissance " type="date">
+                                            </td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
                                         </tr>
                                       </tbody>
                                     </table>
                                   </div>
                                 </div>
                               </div>
-                            
+                          
                           </div>
                           
 
@@ -342,7 +395,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLongTitle">Ajout d'utilisateur</h3>
+          <h3 class="modal-title" id="exampleModalLongTitle">Ajout Bandeaux Publicitaire</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -350,37 +403,29 @@
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
-              <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupFileAddon01">Telecharger</span>
-              </div>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile01"
-                  aria-describedby="inputGroupFileAddon01">
-                <label class="custom-file-label" for="inputGroupFile01">Photo de profil</label>
-              </div>
-            </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="identifiant" class="text-primary">Nom *</label>
-                <input type="text" class="form-control form-control-sm" id="nom"  placeholder="Nom">
+                <label for="nom" class="text-primary">Nom *</label>
+                <input type="text" class="form-control form-control-sm" id="nom" placeholder="Nom">
             </div>
             <div class="form-group">
                 <label for="nom" class="text-primary">Prénom *</label>
-                <input class="form-control form-control-sm" id="prenom" placeholder="Prénom" type="text">
+                <input class="form-control form-control-sm" id="nom" placeholder="Prénom" type="text">
             </div>
             <div class="form-group">
-              <label for="mail" class="text-primary">Adresse e-mail *</label>
-              <input class="form-control form-control-sm" id="mail" placeholder="Adresse e-mail" type="email">
-            </div>
+              <label for="date" class="text-primary">Date de naissance *</label>
+              <input class="form-control form-control-sm" id="date" placeholder="Date de naissance " type="date">
+          </div>
             <div class="form-group">
-              <select class="custom-select custom-select-sm">
-                <option selected>Choix du type</option>
-                <option value="1">Administrateur</option>
-                <option value="2">Assureur</option>
-              </select>
-            </div>
+              <label for="adresse" class="text-primary">Adresse *</label>
+              <input type="email" class="form-control form-control-sm" id="adresse" aria-describedby="Adresse" placeholder="Adresse">
+          </div>
+          <div class="form-group">
+            <label for="telephone" class="text-primary">Téléphone *</label>
+            <input type="number" class="form-control form-control-sm" id="telephone" aria-describedby="telephone" placeholder="Numéro Téléphone">
+        </div>
+        <div class="form-group">
+          <label for="cin" class="text-primary">CIN *</label>
+          <input type="number" class="form-control form-control-sm" id="cin" aria-describedby="CIN" placeholder="CIN">
+      </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -442,7 +487,12 @@
       </div>
     </div>
   </div>
-
+<script>
+ // Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});
+</script>
   <!-- Bootstrap core JavaScript-->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
@@ -459,7 +509,8 @@
   <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="../js/datatables/datatables-demo.js"></script>
+  <script src="../js/datatables.js"></script>
+  <script src="../js/mdb.min.js"></script>
 </body>
 
 </html>
