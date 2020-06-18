@@ -402,30 +402,37 @@
         </div>
         <div class="modal-body">
           <form role="form">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Telecharger</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon02">
+                  <label class="custom-file-label" for="inputGroupFile02">Bandeaux Pub</label>
+                </div>
+              </div>
             <div class="form-group">
-                <label for="nom" class="text-primary">Nom *</label>
-                <input type="text" class="form-control form-control-sm" id="nom" placeholder="Nom">
+                <label for="desc" class="text-primary">Description *</label>
+                <input class="form-control form-control-sm" id="desc" placeholder="Déscription" type="text">
             </div>
             <div class="form-group">
-                <label for="nom" class="text-primary">Prénom *</label>
-                <input class="form-control form-control-sm" id="nom" placeholder="Prénom" type="text">
-            </div>
-            <div class="form-group">
-              <label for="date" class="text-primary">Date de naissance *</label>
-              <input class="form-control form-control-sm" id="date" placeholder="Date de naissance " type="date">
+              <label for="activite" class="text-primary">Jours d'activités *</label>
+              <select class="mdb-select colorful-select dropdown-primary md-form" id="activite" multiple searchable="Search here..">
+                <option value="1">Lundi</option>
+                <option value="2">Mardi</option>
+                <option value="3">Mercredi</option>
+                <option value="4">Jeudi</option>
+                <option value="5">Vendredi</option>
+                <option value="5">Samedi</option>
+                <option value="5">Dimanche</option>
+              </select>
           </div>
             <div class="form-group">
-              <label for="adresse" class="text-primary">Adresse *</label>
-              <input type="email" class="form-control form-control-sm" id="adresse" aria-describedby="Adresse" placeholder="Adresse">
+              <label for="appt" class="text-primary">Heures *</label>
+              <input type="time" id="appt" name="appt" min="07:59" max="17:59" required>
           </div>
-          <div class="form-group">
-            <label for="telephone" class="text-primary">Téléphone *</label>
-            <input type="number" class="form-control form-control-sm" id="telephone" aria-describedby="telephone" placeholder="Numéro Téléphone">
-        </div>
-        <div class="form-group">
-          <label for="cin" class="text-primary">CIN *</label>
-          <input type="number" class="form-control form-control-sm" id="cin" aria-describedby="CIN" placeholder="CIN">
-      </div>
+        
           </form>
         </div>
         <div class="modal-footer">
