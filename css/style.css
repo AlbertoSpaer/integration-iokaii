@@ -28,8 +28,14 @@ body{
 .navbar{
     z-index: 5;
 }
+li.nav-item {
+  border-bottom: 1px solid #fff;
+}
+li.nav-item:hover {
+  background: #ffffff;
+}
 a.nav-link.waves-effect.waves-light, a.nav-link{
-    color: #a7a7a7!important;
+    color: #ffffff!important;
 }
 a.nav-link.active.waves-effect.waves-light,a.nav-link.waves-effect.waves-light:hover, a.nav-link:hover, a.nav-link.active{
     color: #fb3!important;
@@ -181,5 +187,3 @@ h3.title-activites, h3.title-news {
         display: none;
     }
   }
-
-  
