@@ -187,3 +187,37 @@ h3.title-activites, h3.title-news {
         display: none;
     }
   }
+
+  .num-assurance{
+      font-size: 2vw;
+      font-weight: bold;
+  }
+  p.title-assur {
+    color: #014a96;
+    font-family: fantasy;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.contenu-pol{
+   border-right: 1px dashed; 
+}
+.info-pol{
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin: 5px;
+}
+p.name {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.info-dr{
+    font-size: 0.8em;
+}
+.valid{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.periode{
+    font-size: x-small;
+    font-weight: bold;
+}
