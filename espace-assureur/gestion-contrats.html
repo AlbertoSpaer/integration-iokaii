@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>IOKAII Comparateur d'assurance en ligne - Gestion des tarifs</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/chart.css" rel="stylesheet" type="text/css">
+  <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/lightpick.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center bg-white justify-content-center" href="utilisateurs.html">
+        <div class="sidebar-brand-text mx-3"><img src="../img/logo.jpg" alt="logo IOKAII" class="img-fluid"></div>
+      </a>
+
+       <!-- Nav Item - User Information -->
+       <li class="nav-item dropdown no-arrow bg-white">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="img-profile rounded-circle" src="../img/portrait/avatar-1.png">
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tinah Fanomezantsoa</span>
+        
+      </a>
+      <!-- Dropdown - User Information -->
+      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="#">
+          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+          Profile
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+          Settings
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+          Activity Log
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+          Logout
+        </a>
+      </div>
+    </li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link" href="gestion-tarifs.html" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
+          <span>Gestion des tarifs</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gestion-contrats.html" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
+          <span>Gestion des Contrats</span>
+        </a>
+      </li>
+     
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Content Row -->
+            <div class="row bg-white">
+                
+                <div class="col-sm-12 text-left">
+
+
+
+                    <div class="row">
+                      <div class="col-sm-12 py-3">
+                           
+                              <div class="card">
+                                <h3 class="card-header text-center text-info font-weight-bold text-uppercase py-4">Gestion des Contrats</h3>
+                                <ul class="nav nav-tabs px-4 mt-2" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#moto" role="tab" aria-controls="home"
+                                        aria-selected="true">Assurance moto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link moto" id="profile-tab" data-toggle="tab" href="#auto" role="tab" aria-controls="profile"
+                                        aria-selected="false">Assurance auto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link voyage" id="contact-tab" data-toggle="tab" href="#voyage" role="tab" aria-controls="contact"
+                                        aria-selected="false">Assurance voyage</a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="moto" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="card-body">
+                                            <div id="table" class="table-editable">
+                                              <table class="table table-bordered table-responsive-md table-striped text-center">
+                                                <thead>
+                                                  <tr>
+                                                    <th class="text-center">Nom</th>
+                                                    <th class="text-center">Prénom</th>
+                                                    <th class="text-center">Adresse e-mail</th>
+                                                    <th class="text-center">Téléphone</th>
+                                                    <th class="text-center">Nb de place</th>
+                                                    <th class="text-center">Force fiscale en CV</th>
+                                                    <th class="text-center">Genre véhicule</th>
+                                                    <th class="text-center">Marque véhicule</th>
+                                                    <th class="text-center">Numéro moteur</th>
+                                                    <th class="text-center">Permis</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">2</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Familial</td>
+                                                    <td class="pt-3-half" contenteditable="true">Peugeot</td>
+                                                    <td class="pt-3-half" contenteditable="true">123456</td>
+                                                    <td class="pt-3-half" contenteditable="true">
+                                                        <select class="custom-select custom-select-sm">
+                                                          <option selected>Permis A</option>
+                                                          <option>option 2</option>
+                                                          <option>option 3</option>
+                                                        </select>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">2</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Familial</td>
+                                                    <td class="pt-3-half" contenteditable="true">Peugeot</td>
+                                                    <td class="pt-3-half" contenteditable="true">123456</td>
+                                                    <td class="pt-3-half" contenteditable="true">
+                                                        <select class="custom-select custom-select-sm">
+                                                          <option selected>Permis A</option>
+                                                          <option>option 2</option>
+                                                          <option>option 3</option>
+                                                        </select>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">2</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Familial</td>
+                                                    <td class="pt-3-half" contenteditable="true">Peugeot</td>
+                                                    <td class="pt-3-half" contenteditable="true">123456</td>
+                                                    <td class="pt-3-half" contenteditable="true">
+                                                        <select class="custom-select custom-select-sm">
+                                                          <option selected>Permis A</option>
+                                                          <option>option 2</option>
+                                                          <option>option 3</option>
+                                                        </select>
+                                                      </td>
+                                                  </tr>
+                                                  <!-- This is our clonable table line -->
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="auto" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="card-body">
+                                            <div id="table" class="table-editable">
+                                              <table class="table table-bordered table-responsive-md table-striped text-center">
+                                                <thead>
+                                                  <tr>
+                                                    <th class="text-center">Nom</th>
+                                                    <th class="text-center">Prénom</th>
+                                                    <th class="text-center">Adresse e-mail</th>
+                                                    <th class="text-center">Téléphone</th>
+                                                    <th class="text-center">Nombre de place</th>
+                                                    <th class="text-center">Force fiscale en CV</th>
+                                                    <th class="text-center">Type d'énergie</th>
+                                                    <th class="text-center">Type d'usage</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">6</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Essence</td>
+                                                    <td class="pt-3-half" contenteditable="true">Personnel</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">6</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Essence</td>
+                                                    <td class="pt-3-half" contenteditable="true">Personnel</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Andriamalala</td>
+                                                    <td class="pt-3-half" contenteditable="true">Lova</td>
+                                                    <td class="pt-3-half" contenteditable="true">lovaandriamalala@gmail.com</td>
+                                                    <td class="pt-3-half" contenteditable="true">034 52 865 25</td>
+                                                    <td class="pt-3-half" contenteditable="true">6</td>
+                                                    <td class="pt-3-half" contenteditable="true">3cv</td>
+                                                    <td class="pt-3-half" contenteditable="true">Essence</td>
+                                                    <td class="pt-3-half" contenteditable="true">Personnel</td>
+                                                  </tr>
+                                                  <!-- This is our clonable table line -->
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="voyage" role="tabpanel" aria-labelledby="contact-tab">
+
+                                    </div>
+                                  </div>
+                                
+
+                                <div id="type_2" class="card-body ma_select" style="display:none">
+                                    <div id="table" class="table-editable">
+                                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">Nom</th>
+                                            <th class="text-center">Prénom</th>
+                                            <th class="text-center">Adresse e-mail</th>
+                                            <th class="text-center">Téléphone</th>
+                                            <th class="text-center">Nb de place</th>
+                                            <th class="text-center">Force fiscale en CV</th>
+                                            <th class="text-center">Genre véhicule</th>
+                                            <th class="text-center">Marque véhicule</th>
+                                            <th class="text-center">Numéro moteur</th>
+                                            <th class="text-center">Permis</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="pt-3-half" contenteditable="true">responsabilité civile</td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">40.000 Ar</td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
+                                          </tr>
+                                          <!-- This is our clonable table line -->
+                                          <tr>
+                                            <td class="pt-3-half" contenteditable="true">Assurance incendie</td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">20.000 Ar</td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
+                                          </tr>
+                                          <!-- This is our clonable table line -->
+                                          <tr>
+                                            <td class="pt-3-half" contenteditable="true">Assurance tous risques</td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">
+                                              <select class="custom-select custom-select-sm">
+                                                <option selected>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                              </select>
+                                            </td>
+                                            <td class="pt-3-half" contenteditable="true">30.000 Ar</td>
+                                            <td>
+                                              <span class="table-remove"><button type="button"
+                                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                            </td>
+                                          </tr>
+                                          <!-- This is our clonable table line -->
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+
+                              </div>
+                          
+                          </div>
+                          
+
+                    </div>
+
+                </div>
+
+
+            </div>
+           
+              
+                
+  
+              
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; by Ingenosya 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Ajout de Tarif</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+                <label for="nom" class="text-primary">Type d'assurance *</label>
+                <select class="custom-select custom-select-sm">
+                  <option selected>option 1</option>
+                  <option value="1">option 2</option>
+                  <option value="2">option 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nom" class="text-primary">Criteres de tarifications *</label>
+                <select class="custom-select custom-select-sm">
+                  <option selected>option 1</option>
+                  <option value="1">option 2</option>
+                  <option value="2">option 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="date" class="text-primary">Valeur des criteres *</label>
+              <select class="custom-select custom-select-sm">
+                <option selected>option 1</option>
+                <option value="1">option 2</option>
+                <option value="2">option 3</option>
+              </select>
+          </div>
+            <div class="form-group">
+              <label for="adresse" class="text-primary">Tarifs *</label>
+              <input type="number" class="form-control form-control-sm" id="tarif" aria-describedby="tarif" placeholder="Tarif">
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title" id="exampleModalLongTitle">Edition d'utilisateur</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+                <label for="identifiant" class="text-primary">Identifiant *</label>
+                <input type="email" class="form-control" id="identifiant" aria-describedby="emailHelp" placeholder="Identifiant">
+            </div>
+            <div class="form-group">
+                <label for="nom" class="text-primary">Nom et prénom *</label>
+                <input class="form-control" id="nom" placeholder="Mot de Passe" type="password">
+            </div>
+            <div class="form-group">
+              <label for="mail" class="text-primary">Adresse e-mail *</label>
+              <input class="form-control" id="mail" placeholder="Mot de Passe" type="password">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  const $tableID = $('#table');
+ const $BTN = $('#export-btn');
+ const $EXPORT = $('#export');
+
+ const newTr = `
+<tr class="hide">
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half">
+    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+  </td>
+  <td>
+    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
+  </td>
+</tr>`;
+
+ $('.table-add').on('click', 'i', () => {
+
+   const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+
+   if ($tableID.find('tbody tr').length === 0) {
+
+     $('tbody').append(newTr);
+   }
+
+   $tableID.find('table').append($clone);
+ });
+
+ $tableID.on('click', '.table-remove', function () {
+
+   $(this).parents('tr').detach();
+ });
+
+ $tableID.on('click', '.table-up', function () {
+
+   const $row = $(this).parents('tr');
+
+   if ($row.index() === 0) {
+     return;
+   }
+
+   $row.prev().before($row.get(0));
+ });
+
+ $tableID.on('click', '.table-down', function () {
+
+   const $row = $(this).parents('tr');
+   $row.next().after($row.get(0));
+ });
+
+ // A few jQuery helpers for exporting only
+ jQuery.fn.pop = [].pop;
+ jQuery.fn.shift = [].shift;
+
+ $BTN.on('click', () => {
+
+   const $rows = $tableID.find('tr:not(:hidden)');
+   const headers = [];
+   const data = [];
+
+   // Get the headers (add special header logic here)
+   $($rows.shift()).find('th:not(:empty)').each(function () {
+
+     headers.push($(this).text().toLowerCase());
+   });
+
+   // Turn all existing rows into a loopable array
+   $rows.each(function () {
+     const $td = $(this).find('td');
+     const h = {};
+
+     // Use the headers from earlier to name our hash keys
+     headers.forEach((header, i) => {
+
+       h[header] = $td.eq(i).text();
+     });
+
+     data.push(h);
+   });
+
+   // Output the result
+   $EXPORT.text(JSON.stringify(data));
+ });
+</script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../js/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin-2.min.js"></script>
+
+  <script src="../js/bootstrap4-toggle.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="../js/datatables/jquery.dataTables.min.js"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../js/datatables.js"></script>
+  <script src="../js/mdb.min.js"></script>
+</body>
+
+</html>
