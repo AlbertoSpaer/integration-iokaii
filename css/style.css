@@ -228,3 +228,6 @@ p.name {
     font-size: medium;
     font-weight: bold;
 }
+.small {
+    font-size: 1vw!important;
+}
