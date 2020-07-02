@@ -189,7 +189,7 @@ h3.title-activites, h3.title-news {
   }
 
   .num-assurance{
-      font-size: 2vw;
+      font-size: 3vw;
       font-weight: bold;
   }
   p.title-assur {
@@ -197,6 +197,13 @@ h3.title-activites, h3.title-news {
     font-family: fantasy;
     line-height: 1.2;
     margin-bottom: 5px;
+    font-size: 1.5em;
+}
+.md-form.input-group .input-group-text.md-addon {
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5vw;
 }
 .contenu-pol{
    border-right: 1px dashed; 
