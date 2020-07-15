@@ -114,8 +114,11 @@ footer.page-footer .footer-copyright{
 h3.title-activites, h3.title-news {
     font-size: 1.5vw;
     text-align: center;
-    color: orange;
+    color: white;
     margin-bottom: 1em;
+    BACKGROUND: #12a8c3;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 .activ, .new {
     font-size: 1vw;
