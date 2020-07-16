@@ -40,7 +40,10 @@ a.nav-link.waves-effect.waves-light, a.nav-link{
 a.nav-link.active.waves-effect.waves-light,a.nav-link.waves-effect.waves-light:hover, a.nav-link:hover, a.nav-link.active{
     color: #fb3!important;
 }
-
+a.nav-link.active{
+    color: #ffffff!important;
+    background: #fab51a;
+}
 .breadcrumb{
     background-color: #fff!important;
 }
@@ -87,8 +90,9 @@ footer.page-footer .footer-copyright{
     color: #4285f4;
 }
 .coupon .content {
-    border-left: 1px solid #a7a7a7;
-    border-right: 1px solid #a7a7a7;
+    border-top: 1px solid #a7a7a7;
+    border-bottom: 1px solid #a7a7a7;
+    padding: 10px;
 }
 .coupon p{
     font-size: 1vw;
