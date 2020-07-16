@@ -1,367 +1,512 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<!------ Include the above in your HEAD tag ---------->
+<html>
 <head>
+  <title>IOKAII Comparateur d'assurance en ligne - Gestion du compte</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>IOKAII Comparateur d'assurance en ligne - Edition profile</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
-  <link href="../css/chart.css" rel="stylesheet" type="text/css">
-  <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/lightpick.css">
+ 
+  <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="../css/mdb.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-
+  <link rel="stylesheet" href="../css/lightpick.css">
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body id="page-top">
+<body class="bg-white">
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+  
 
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
+  <div class="main-content">
 
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center bg-white justify-content-center" href="utilisateurs.html">
-        <div class="sidebar-brand-text mx-3"><img src="../img/logo.jpg" alt="logo IOKAII" class="img-fluid"></div>
-      </a>
 
-       <!-- Nav Item - User Information -->
-       <li class="nav-item dropdown no-arrow bg-white">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="img-profile rounded-circle" src="../img/portrait/avatar-1.png">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tinah Fanomezantsoa</span>
-        
-      </a>
-      <!-- Dropdown - User Information -->
-      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="edit-profile.html">
-          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profile
-        </a>
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-          Settings
-        </a>
-        <a class="dropdown-item" href="#">
-          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-          Activity Log
-        </a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-          Logout
-        </a>
-      </div>
-    </li>
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-     
+      <!-- Sidebar Toggle (Topbar) -->
+      <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+      </button>
 
-      <li class="nav-item">
-        <a class="nav-link" href="gestion-assurance.html" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
-          <span>Gestion des assurances</span>
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="historique.html" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
-          <span>Historiques</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="gestion-contrats.html" data-target="#parametrage" aria-expanded="true" aria-controls="parametrage">
-          <span>Gestion des contrats</span>
-        </a>
-      </li>
-     
-    </ul>
-    <!-- End of Sidebar -->
+      <!-- Topbar Search -->
+      
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column bg-white">
+      <!-- Topbar Navbar -->
+      <ul class="navbar-nav ml-auto">
 
-      <!-- Main Content -->
-      <div id="content">
+        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+        <li class="nav-item dropdown no-arrow d-sm-none">
+          <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-search fa-fw"></i>
+          </a>
+          <!-- Dropdown - Messages -->
+          <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+            <form class="form-inline mr-auto w-100 navbar-search">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
 
-        <!-- Topbar -->
+        <!-- Nav Item - Alerts -->
+        <li class="nav-item dropdown no-arrow mx-1">
+          <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bell fa-fw"></i>
+            <!-- Counter - Alerts -->
+            <span class="badge badge-danger badge-counter">3+</span>
+          </a>
+          <!-- Dropdown - Alerts -->
+          <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+            <h6 class="dropdown-header">
+              Alerts Center
+            </h6>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <div class="mr-3">
+                <div class="icon-circle bg-primary">
+                  <i class="fas fa-file-alt text-white"></i>
+                </div>
+              </div>
+              <div>
+                <div class="small text-gray-500">December 12, 2019</div>
+                <span class="font-weight-bold">A new monthly report is ready to download!</span>
+              </div>
+            </a>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <div class="mr-3">
+                <div class="icon-circle bg-success">
+                  <i class="fas fa-donate text-white"></i>
+                </div>
+              </div>
+              <div>
+                <div class="small text-gray-500">December 7, 2019</div>
+                $290.29 has been deposited into your account!
+              </div>
+            </a>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <div class="mr-3">
+                <div class="icon-circle bg-warning">
+                  <i class="fas fa-exclamation-triangle text-white"></i>
+                </div>
+              </div>
+              <div>
+                <div class="small text-gray-500">December 2, 2019</div>
+                Spending Alert: We've noticed unusually high spending for your account.
+              </div>
+            </a>
+            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+          </div>
+        </li>
 
-        <!-- Begin Page Content -->
-        <div class="container">
+        <div class="topbar-divider d-none d-sm-block"></div>
 
-          <!-- Content Row -->
-            <div class="row">
-                <div class="col-sm-12 text-left">
+        <!-- Nav Item - User Information -->
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="../img/portrait/avatar-1.png">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tinah Fanomezantsoa</span>
+            
+          </a>
+          <!-- Dropdown - User Information -->
+          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+              Profile
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+              Settings
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+              Activity Log
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+              Logout
+            </a>
+          </div>
+        </li>
 
-                    <div class="row mt-4">
-                        
-                        <div class="col-md-4">
-                            <figure class="hero-image">
-                                <img src="../img/portrait/avatar-1.png" width="100" height="100" alt="5" class="img-responsive">
-                            </figure>
-                        </div>
-                        <div class="col-md-8">
-                            
-                        </div>
-                         
+      </ul>
+
+    </nav>
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1 style="color: #29b6f6">Tianh Fanomezantsoa</h1></div>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+              
+
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01"
+              aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+      </div></hr><br>
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+            <ul class="nav md-tabs light-blue lighten-1 mx-0 mb-0 mt-1">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Infos Profile</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages">Gestion assurance</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings">Historique</a></li>
+              </ul>
+
+              
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <hr>
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      
+                          <div class="row">
+                          <div class="col-md-6 mb-2">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                             <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                          </div>
+                     
+                          <div class="col-md-6 mb-2">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                              <label for="email"><h4>Location</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                            <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                          </div>
+
+                           <div class="col-md-6 mb-2">
+                                <br>
+                              	<button class="btn btn-lg btn-warning" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            </div>
+                          </div>
+              	</form>
+              
+              <hr>
+              
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="messages">
+               
+               <h2>Liste de vos assurances</h2>
+               
+               <hr>
+               <div class="row">
+                <div class="col-sm-6 p-4 container">
+                     
+                  <div class="row coupon">
+                    <div class="col-lg-12 text-center logo">
+                        <img class="img-fluid" src="../img/logo/allianz.png" alt="coupon allianz">
                     </div>
-                          
+                    <div class="col-lg-12 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                    </div>
+                </div>
+      
+                  <div class="row coupon">
+                    <div class="col-lg-12 text-center logo">
+                        <img class="img-fluid" src="../img/logo/aro.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-12 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                    </div>
+                  </div>
+      
+                  <div class="row coupon">
+                    <div class="col-lg-12 text-center logo">
+                        <img class="img-fluid" src="../img/logo/NyHavana.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-12 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                    </div>
+                  </div>
+      
+                  <div class="row coupon">
+                    <div class="col-lg-12 text-center logo">
+                        <img class="img-fluid" src="../img/logo/allianz.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-12 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                    </div>
+                  </div>
+      
+                  <div class="row coupon">
+                    <div class="col-lg-12 text-center logo">
+                        <img class="img-fluid" src="../img/logo/allianz.png" alt="coupon allianz">
+                    </div>
+                    <div class="col-lg-12 content">
+                        <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                        <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                        <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                        <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                        <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                    </div>
+                </div>
+                    
                 </div>
 
-              
-
-            </div>
-           
-              
+                <div class="col-sm-6 p-4 container">
+                     
+                            <div class="row coupon">
+                              <div class="col-lg-12 text-center logo">
+                                  <img class="img-fluid" src="../img/logo/saham.png" alt="coupon allianz">
+                              </div>
+                              <div class="col-lg-12 content">
+                                  <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                                  <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                                  <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                                  <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                                  <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                              </div>
+                              <div class="col-lg-12 text-center">
+                                  <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                              </div>
+                          </div>
                 
+                          <div class="row coupon">
+                            <div class="col-lg-12 text-center logo">
+                                <img class="img-fluid" src="../img/logo/NyHavana.png" alt="coupon allianz">
+                            </div>
+                            <div class="col-lg-12 content">
+                                <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                                <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                                <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                                <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                                <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                            </div>
+                        </div>
+                
+                        <div class="row coupon">
+                          <div class="col-lg-12 text-center logo">
+                              <img class="img-fluid" src="../img/logo/aro.png" alt="coupon allianz">
+                          </div>
+                          <div class="col-lg-12 content">
+                              <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                              <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                              <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                              <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                              <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                          </div>
+                          <div class="col-lg-12 text-center">
+                              <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                          </div>
+                      </div>
+                
+                      <div class="row coupon">
+                        <div class="col-lg-12 text-center logo">
+                            <img class="img-fluid" src="../img/logo/allianz.png" alt="coupon allianz">
+                        </div>
+                        <div class="col-lg-12 content">
+                            <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                            <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                            <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                            <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                            <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                        </div>
+                    </div>
+                
+                    <div class="row coupon">
+                      <div class="col-lg-12 text-center logo">
+                          <img class="img-fluid" src="../img/logo/allianz.png" alt="coupon allianz">
+                      </div>
+                      <div class="col-lg-12 content">
+                          <h3 class="titre-coupon">Assurance auto - garantie civile</h3>
+                          <p>Marque : <strong class="text-primary">Mercedes</strong></p>
+                          <p>Num de la police d'assurance : <strong class="text-primary">FDS524D</strong></p>
+                          <p>Date de fin : <strong class="text-primary">12 décembre 2020</strong></p>
+                          <p>Immatriculation : <strong class="text-primary">1256TB</strong></p>
+                      </div>
+                      <div class="col-lg-12 text-center">
+                          <a class="btn btn-primary text-white" href="#">Voir Détails</a>
+                      </div>
+                  </div>
+                    
+                </div>
+                    
+
+              </div>
+               
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="settings">
+            		<div class="row">
+               	
+                  <hr>
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Location</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                               	<!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
+                            </div>
+                      </div>
+                </form>
+              </div>
+              </div>
+               
+              </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+                          
+  </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
   
-              
-
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; by Ingenosya 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLongTitle">Ajout de Tarif</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-                <label for="nom" class="text-primary">Type d'assurance *</label>
-                <select class="custom-select custom-select-sm">
-                  <option selected>option 1</option>
-                  <option value="1">option 2</option>
-                  <option value="2">option 3</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="nom" class="text-primary">Criteres de tarifications *</label>
-                <select class="custom-select custom-select-sm">
-                  <option selected>option 1</option>
-                  <option value="1">option 2</option>
-                  <option value="2">option 3</option>
-                </select>
-            </div>
-            <div class="form-group">
-              <label for="date" class="text-primary">Valeur des criteres *</label>
-              <select class="custom-select custom-select-sm">
-                <option selected>option 1</option>
-                <option value="1">option 2</option>
-                <option value="2">option 3</option>
-              </select>
-          </div>
-            <div class="form-group">
-              <label for="adresse" class="text-primary">Tarifs *</label>
-              <input type="number" class="form-control form-control-sm" id="tarif" aria-describedby="tarif" placeholder="Tarif">
-          </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <h3 class="modal-title" id="exampleModalLongTitle">Edition d'utilisateur</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-                <label for="identifiant" class="text-primary">Identifiant *</label>
-                <input type="email" class="form-control" id="identifiant" aria-describedby="emailHelp" placeholder="Identifiant">
-            </div>
-            <div class="form-group">
-                <label for="nom" class="text-primary">Nom et prénom *</label>
-                <input class="form-control" id="nom" placeholder="Mot de Passe" type="password">
-            </div>
-            <div class="form-group">
-              <label for="mail" class="text-primary">Adresse e-mail *</label>
-              <input class="form-control" id="mail" placeholder="Mot de Passe" type="password">
-            </div>
-            
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary text-left" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-success text-right">Sauvegarder</button>
-        </div>
-      </div>
-    </div>
-  </div>
-<script>
-  const $tableID = $('#table');
- const $BTN = $('#export-btn');
- const $EXPORT = $('#export');
-
- const newTr = `
-<tr class="hide">
-  <td class="pt-3-half" contenteditable="true">Example</td>
-  <td class="pt-3-half" contenteditable="true">Example</td>
-  <td class="pt-3-half" contenteditable="true">Example</td>
-  <td class="pt-3-half" contenteditable="true">Example</td>
-  <td class="pt-3-half" contenteditable="true">Example</td>
-  <td class="pt-3-half">
-    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
-  </td>
-  <td>
-    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
-  </td>
-</tr>`;
-
- $('.table-add').on('click', 'i', () => {
-
-   const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
-
-   if ($tableID.find('tbody tr').length === 0) {
-
-     $('tbody').append(newTr);
-   }
-
-   $tableID.find('table').append($clone);
- });
-
- $tableID.on('click', '.table-remove', function () {
-
-   $(this).parents('tr').detach();
- });
-
- $tableID.on('click', '.table-up', function () {
-
-   const $row = $(this).parents('tr');
-
-   if ($row.index() === 0) {
-     return;
-   }
-
-   $row.prev().before($row.get(0));
- });
-
- $tableID.on('click', '.table-down', function () {
-
-   const $row = $(this).parents('tr');
-   $row.next().after($row.get(0));
- });
-
- // A few jQuery helpers for exporting only
- jQuery.fn.pop = [].pop;
- jQuery.fn.shift = [].shift;
-
- $BTN.on('click', () => {
-
-   const $rows = $tableID.find('tr:not(:hidden)');
-   const headers = [];
-   const data = [];
-
-   // Get the headers (add special header logic here)
-   $($rows.shift()).find('th:not(:empty)').each(function () {
-
-     headers.push($(this).text().toLowerCase());
-   });
-
-   // Turn all existing rows into a loopable array
-   $rows.each(function () {
-     const $td = $(this).find('td');
-     const h = {};
-
-     // Use the headers from earlier to name our hash keys
-     headers.forEach((header, i) => {
-
-       h[header] = $td.eq(i).text();
-     });
-
-     data.push(h);
-   });
-
-   // Output the result
-   $EXPORT.text(JSON.stringify(data));
- });
-</script>
-  <!-- Bootstrap core JavaScript-->
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="../js/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin-2.min.js"></script>
-
-  <script src="../js/bootstrap4-toggle.min.js"></script>
-  <!-- Page level plugins -->
-  <script src="../js/datatables/jquery.dataTables.min.js"></script>
-  <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="../js/datatables.js"></script>
-  <script src="../js/mdb.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../js/jquery.easing.min.js"></script>
+  
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+  
+    <script src="../js/bootstrap4-toggle.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="../js/datatables/jquery.dataTables.min.js"></script>
+    <script src="../js/datatables/dataTables.bootstrap4.min.js"></script>
+  
+    <!-- Page level custom scripts -->
+    <script src="../js/datatables/datatables-demo.js"></script>
 </body>
-
 </html>
