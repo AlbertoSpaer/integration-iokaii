@@ -95,7 +95,7 @@ footer.page-footer .footer-copyright{
     padding: 10px;
 }
 .coupon p{
-    font-size: 0.8em;
+    font-size: 1vw;
     margin-bottom: auto;
 }
 .center-block {
@@ -110,10 +110,12 @@ footer.page-footer .footer-copyright{
 /*CSS Historique d'activité*/
 
 .activities, .news {
-    border: 1px solid #a7a7a7;
-    border-radius: 5px;
     padding: 10px;
     margin-bottom: 1em;
+}
+.activities p {
+    font-size: 0.8em;
+    color: #6f6f6f;
 }
 h3.title-activites, h3.title-news {
     font-size: 1.5vw;
@@ -237,4 +239,17 @@ p.name {
 }
 .small {
     font-size: 1vw!important;
+}
+.row.hist {
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+	background: linear-gradient(to right, #29b6f61a, #29b6f61a);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size 1s 0s;
+}
+.row.hist:hover {
+	background-size: 100% 100%;
 }
